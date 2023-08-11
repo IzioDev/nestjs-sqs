@@ -13,9 +13,6 @@
     "format": "prettier --write **/*.{ts,json}",
     "lint": "eslint \"lib/**/*.ts\" --fix"
   },
-  "publishConfig": {
-    "@IzioDev/registry": "https://npm.pkg.github.com"
-  },
   "bugs": {
     "url": "https://github.com/ssut/nestjs-sqs/issues"
   },

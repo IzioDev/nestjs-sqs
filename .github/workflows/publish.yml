@@ -44,4 +44,4 @@ jobs:
       - name: 🐙 Publish no GitHub
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm publish --no-git-checks
+        run: pnpm publish
