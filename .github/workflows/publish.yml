@@ -44,4 +44,6 @@ jobs:
       - name: 🐙 Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm publish --no-git-checks
+        run: |
+          pnpm config set registry https://npm.pkg.github.com/
+          pnpm publish --no-git-checks
