@@ -31,7 +31,7 @@ jobs:
           run_install: false
 
       - name: Install Dependencies
-        run: pnpm i
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
       - name: Build
         run: pnpm build
@@ -41,7 +41,7 @@ jobs:
           TAG_NAME: ${{ github.event.release.tag_name }}
         run: pnpm version ${TAG_NAME} --no-git-tag-version
 
-      - name: 🐙 Publish no GitHub
+      - name: 🐙 Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm publish
+        run: pnpm publish --no-git-checks
