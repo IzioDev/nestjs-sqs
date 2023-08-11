@@ -8,6 +8,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "prepare": "rimraf -rf dist && tsc -p tsconfig.json",
     "test:e2e": "jest --config=jest-e2e.config.js --detectOpenHandles --runInBand --forceExit",
     "build": "rimraf -rf dist && tsc -p tsconfig.json",
     "format": "prettier --write **/*.{ts,json}",
